@@ -20,12 +20,18 @@
 
 /* Begin PBXFileReference section */
 		30851A8E2CDEC8DE00268FEC /* smc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = smc; sourceTree = BUILT_PRODUCTS_DIR; };
+		30CA31002CE2933B00828154 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		30851A902CDEC8DE00268FEC /* smc */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = smc;
+			sourceTree = "<group>";
+		};
+		30851A9A2CDEE1C800268FEC /* SMCKit */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SMCKit;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -44,6 +50,8 @@
 		30851A852CDEC8DE00268FEC = {
 			isa = PBXGroup;
 			children = (
+				30CA31002CE2933B00828154 /* readme.md */,
+				30851A9A2CDEE1C800268FEC /* SMCKit */,
 				30851A902CDEC8DE00268FEC /* smc */,
 				30851A8F2CDEC8DE00268FEC /* Products */,
 			);
@@ -74,6 +82,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				30851A902CDEC8DE00268FEC /* smc */,
+				30851A9A2CDEE1C800268FEC /* SMCKit */,
 			);
 			name = smc;
 			packageProductDependencies = (
@@ -94,6 +103,7 @@
 				TargetAttributes = {
 					30851A8D2CDEC8DE00268FEC = {
 						CreatedOnToolsVersion = 16.1;
+						LastSwiftMigration = 1610;
 					};
 				};
 			};
@@ -248,10 +258,13 @@
 		30851A962CDEC8DE00268FEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H7ETKU5TN3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -259,10 +272,12 @@
 		30851A972CDEC8DE00268FEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H7ETKU5TN3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
